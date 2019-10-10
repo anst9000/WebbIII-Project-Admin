@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*, *::before, *::after {
+  margin:  0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background-color: #DABFFF;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 1000px;
+  min-height: 100%;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.header, .footer {
+  position: fixed;
+  background-color: #4F518C;
+  color: #dddddd;
+  width: 100%;
+}
+
+.header {
+  top: 0px;
+  left: 0px;
+  height: 100px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.header h1 span {
+  color: yellowgreen;
+}
+
+.content {
+  width: 100%;
+  margin: 3rem auto;
+  display: block;
+  font-size: 1rem;
+}
+
+.content-text {
+  margin-bottom: 2rem;
+}
+
+.content-text p {
+  margin: 0.8rem auto 0 auto;
+  font-size: 1.3rem;
+  width: 70%;
+}
+
+.login-links {
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.form-group label {
+  clear: left;
+  float: left;
+  width: 150px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.form-group input[type=text],
+.form-group input[type=password] {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 1px auto 10px auto;
+  box-sizing: border-box;
+}
+
+form input[type='button'],
+.form-group input[type='submit'],
+.form-group input[type=reset],
+.btn {
+  background-color: #A0DDFF;
+  color: #330;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  display:inline-block;
+  width: 170px;
+  padding: 7px 2px;
+  margin: 1rem 1.5rem;
+  text-transform: uppercase;
+  outline: none;
+}
+
+form input[type='button']:hover,
+.form-group input[type='submit']:hover,
+.btn:hover {
+  color: #737373;
+}
+
+.form-group input[type=reset],
+#passwordRegretBtn {
+  background-color: #FF6666;
+  color: #eeeeee;
+}
+
+.form-group input[type=reset]:hover,
+#passwordRegretBtn {
+  background-color: #FF7777;
+}
+
+
+.signout form input[type='button'] {
+  margin-top: 9rem;
+  float: right;
+  width: 140px;
+  padding: 5px 2px;
+  background-color: #FF6666;
+  color: #eeeeee;
+}
+
+.signout form input[type='button']:hover,
+.form-group input[type=reset]:hover {
+  background-color: #FF7777;
+}
+
+#registerSubmitBtn,
+#registerResetBtn,
+#passwordSubmitBtn,
+#passwordRegretBtn {
+  margin: 1rem 0.8rem;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  bottom: 0px;
+  left: 0px;
+  height: 50px;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer p {
+  font-size: 1.1rem;
+}
+
+#mainContent {
+  height: 400px;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-areas:
+    "header type"
+    "links result"
+    "links result"
+    "links result"
+    "links result";
+  grid-template-columns: 1fr 3fr;
+  grid-auto-rows: 1fr 2fr 2fr 2fr 1fr;
+}
+
+#mainText {
+  grid-area: header;
+  background-color: #A9BCD0;
+}
+
+#mainText p,
+#mainType p {
+  font-size: 1.5rem;
+  padding-top: .5rem;
+}
+
+#mainLinks {
+  padding-top: 2rem;
+  width: 100%;
+  grid-area: links;
+  background-color: #A9BCD0;
+}
+
+#mainLinks .btn,
+.btn {
+  font-size: 1.0rem;
+  letter-spacing: 0.8px;
+  border-radius: 15px;
+  display:inline-block;
+  width: 140px;
+  padding: 4px 1px;
+  margin: 1.2rem 1.1rem;
+}
+
+#mainLinks .btn:hover,
+.btn:hover {
+  color: #737373;
+}
+
+#mainType {
+  background-color: #A9BCD0;
+  grid-area: type;
+  margin: 0;
+  padding: 0;
+}
+
+#mainResult {
+  grid-area: result;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#mainResult ul {
+  text-align: left;
+  margin: 2rem auto 0 1rem;
+}
+
+#mainResult ul li {
+  list-style-type: none;
+}
+
+#mainResult table {
+  border-spacing: 8px 2px;
+}
+
+#mainResult td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 0.9rem;
+}
+
+#mainResult th {
+  padding: 5px 0;
+  border: 1px solid #777;
+  font-size: 1.2rem;
+}
+
+#mainResult {
+  overflow-y: scroll;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 0 0;
+  border: 1px solid #333;
+  width: 60%; /* Could be more or less, depending on screen size */
+  height: 40%;
+}
+
+.modal-body {
+  padding: 0.5rem 4rem 1.5rem 4rem;
+  display: block;
+  height: 300px;
+  background-color: #DABFFF;
+  text-align: left;
+}
+
+.modal-info {
+  height: 50px;
+}
+
+.modal-body label {
+  display: inline-block;
+  clear: left;
+  width: 250px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.modal-body input[type=text],
+.modal-body textarea {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 1px auto 10px auto;
+  box-sizing: border-box;
+}
+
+.modal-body form {
+  margin: 1rem auto;
+}
+
+.modal-header,
+.modal-footer {
+  background-color: #A9BCD0;
+  color: #dddddd;
+  height: 50px;
+}
+
+.modal-header {
+  font-size: 1.5rem;
+  color: #333;
+  padding-top: 10px;
+}
+
+.modal-footer .btn {
+  font-size: 1.0rem;
+  letter-spacing: 0.8px;
+  border-radius: 15px;
+  display:inline-block;
+  width: 140px;
+  padding: 4px 1px;
+  margin: 0.5rem;
+  background-color: #A0DDFF;
+  color: #330;
+}
+
+.modal-footer #closeBtn {
+  background-color: #FF6666;
+  color: #eeeeee;
+}
+
+.modal-footer #closeBtn:hover {
+  background-color: #FF7777;
+}
+
+
+/* The Close Button */
+.close {
+  color: #555;
+  float: right;
+  font-size: 48px;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#tableLink {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
