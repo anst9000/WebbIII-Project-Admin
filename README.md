@@ -5,11 +5,11 @@
 > This is the Admin site to use when creating, reading, updating or deleting posts in the WebbIII-Project-CV-API which is a REST API built in PHP.
 
 ## Site
-> The Internet address to this site is [https://www.anst9000.xyz/panel](https://www.anst9000.xyz/panel) . This folder is protected with a password to decrease the possibilities to enter the API trying to change the content of it. See under login to Admin. When entering the site for the first time you have to create a username and a password which is hashed and stored in a datatbase. After doing this you can enter the Admin pages and there is full CRUD functionality for this REST API.
+> The Internet address to this site is [https://anst9000.xyz/panel](https://anst9000.xyz/panel) . This folder is protected with a password to decrease the possibilities to enter the API trying to change the content of it. See under login to Admin. When entering the site for the first time you have to create a username and a password which is hashed and stored in a datatbase. After doing this you can enter the Admin pages and there is full CRUD functionality for this REST API.
 
 ## Login to Admin
 1.
-> [https://www.anst9000.xyz/panel](https://www.anst9000.xyz/panel)  
+> [https://anst9000.xyz/panel](https://anst9000.xyz/panel)  
 > **USERNAME**: anst9000  
 > **PASSWORD**: dt173g_project  
 
